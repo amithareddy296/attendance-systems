@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+</head>
+
+<body>
+
+<h1>Welcome {{name}}</h1>
+
+<a href="/mark">
+Mark Today's Attendance
+</a>
+
+<br><br>
+
+<table border="1">
+
+<tr>
+<th>Date</th>
+<th>Status</th>
+</tr>
+
+{% for row in records %}
+
+<tr>
+
+<td>{{row[0]}}</td>
+
+<td>{{row[1]}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/logout">
+Logout
+</a>
+
+</body>
+</html>
